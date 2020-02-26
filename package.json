@@ -1,0 +1,77 @@
+{
+  "name": "boilerplates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "start": "node dist/server/app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshRing/boilerplates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshRing/boilerplates/issues"
+  },
+  "homepage": "https://github.com/AshRing/boilerplates#readme",
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.0.9",
+    "@types/react-router-dom": "^4.3.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-map-gl": "^5.2.3",
+    "react-mapbox-gl": "^4.8.2",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.2",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.2",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.13",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^3.4.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "enzyme-to-json": "^3.3.5",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "url-loader": "^1.1.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx)"
+    ]
+  }
+}
