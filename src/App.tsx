@@ -120,7 +120,7 @@ const App = () => {
                 </Layer>
                 {currentPopupMarker && (
                     <Popup coordinates={currentPopupMarker.coords}>
-                        <p>name: {currentPopupMarker.name}</p>
+                        <p>name: {currentPopupMarker.name ? currentPopupMarker.name : currentPopupMarker.id}</p>
                         <p>description: {currentPopupMarker.description}</p>
                     </Popup>
                 )}

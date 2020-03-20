@@ -1,0 +1,90 @@
+.actions {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+
+    background: white;
+    box-shadow: 0px 2px 10px rgb(129, 129, 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__initiateAdd {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__addSpot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__form {
+            display: flex;
+        }
+    }
+
+    button {
+        border: none;
+        border-radius: 15px;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: .1s all ease;
+        
+        &:hover {
+            box-shadow: 0px 1px 5px rgba(black, .3);
+            cursor: pointer;
+        }
+        
+        &.btn__primary {
+            color: #eb4e00;
+
+            &:hover {
+                color: white;
+                background: #eb4e00;
+            }
+        }
+
+        &.btn__secondary {
+            color: rgb(148, 148, 148);
+            background: transparent;
+
+            &:hover {
+                color: white;
+                background: rgb(148, 148, 148);
+            }
+        }
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid rgb(148, 148, 148);
+        padding: 5px 5px 2px;
+        font-size: 16px;
+        min-width: 325px;
+        margin: 0 10px;
+
+        &::placeholder {
+            font-size: 12px;
+        }
+
+        &:focus {
+            border-bottom: 2px solid #eb4e00;
+            outline: none;
+        }
+    }
+}
+
+.addSpot {
+    display: flex;
+    align-items: center;
+    
+    &__inputBox {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+}

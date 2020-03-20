@@ -5,8 +5,9 @@ const Add = (props) => {
     const [description, setDescription] = React.useState<string>("");
 
     return (
-        <div style={{ position: "absolute", top: "50px", left: "50%" }}>
-            <form>
+        <div className="actions__addSpot">
+            <form className="addSpot">
+                <div className="addSpot__inputBox">
                 <input
                     type="text"
                     value={name}
@@ -18,8 +19,10 @@ const Add = (props) => {
                     value={description}
                     placeholder="Spot details"
                     onChange={(e) => setDescription(e.target.value)}
-                />
-                <button onClick={(e) => props.addSpot(e, name, description)}>Add Spot!</button>
+                /></div>
+                <div className="addSpot__btnBox">
+                <button className="btn__primary" onClick={(e) => props.addSpot(e, name, description)}>Add Spot!</button>
+                <button className="btn__secondary" onClick={props.cancelPlaceMarker}>Cancel</button></div>
             </form>
         </div>
     );
