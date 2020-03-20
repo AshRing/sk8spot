@@ -67,6 +67,11 @@ const App = () => {
         setAddOpen(false);
     };
 
+    const cancelPlaceMarker = () => {
+        setCurrentMarker(undefined);
+        setAddOpen(false);
+    };
+
     const onDragEnd = (e) => {
         const lngLat: [number, number] = [e.lngLat.lng, e.lngLat.lat];
         setCurrentMarker(lngLat);
@@ -125,9 +130,11 @@ const App = () => {
                     </Popup>
                 )}
             </Map>
-            {addOpen && <Add addSpot={(e, name, description) => setMarker(e, name, description)} />}
-            <div style={{ position: "absolute", bottom: "50px", left: "20px" }}>
-                {!currentMarker && <button onClick={placeMarker}>Add Marker</button>}
+            <div className="actions">
+                {addOpen && <Add addSpot={(e, name, description) => setMarker(e, name, description)} cancelPlaceMarker={cancelPlaceMarker} />}
+                <div className="actions__initiateAdd">
+                    {!currentMarker && <button className="btn__primary" onClick={placeMarker}>Add Marker</button>}
+                </div>
             </div>
         </div>
     );
